@@ -1,8 +1,7 @@
 package Test_Bank.uitest;
 
-
-import org.testng.annotations.AfterMethod;
 import Test_Bank.Driver.DriverSingleton;
+import org.testng.annotations.AfterMethod;
 
 public class BaseTest {
 
@@ -11,4 +10,3 @@ public class BaseTest {
         DriverSingleton.closeDriver();
     }
 }
-
