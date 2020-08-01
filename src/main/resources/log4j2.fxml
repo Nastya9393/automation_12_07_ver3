@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javax.security.auth.login.Configuration?>
+<?import java.io.Console?>
+<Configuration>
+    <Appenders>
+        <Console name="Console">
+            <PatternLayout>
+                <Pattern>%d %p %c{2} [%t] %l %m%n</Pattern>
+            </PatternLayout>
+        </Console>
+        <File name="File" fileName="target/logs/ANDTM-automation.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{2} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+</Configuration>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Log4j2"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
